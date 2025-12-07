@@ -35,15 +35,6 @@
 </head>
 <body class="bg-white text-black min-h-screen selection:bg-black selection:text-white">
 
-    <!-- Navigation: Top Right, No Bar, Just Text -->
-    <nav class="fixed top-0 right-0 p-8 z-50 mix-blend-difference">
-        <ul class="flex space-x-8 text-sm md:text-base tracking-widest uppercase">
-            <li><a href="#home" class="hover:underline decoration-1 underline-offset-4 transition-all">Home</a></li>
-            <li><a href="#about" class="hover:underline decoration-1 underline-offset-4 transition-all">About</a></li>
-            <li><a href="#contact" class="hover:underline decoration-1 underline-offset-4 transition-all">Contact</a></li>
-        </ul>
-    </nav>
-
     <!-- Main Content Container: Left Justified, Narrow 'Document' Width -->
     <main class="max-w-3xl mx-auto px-6 md:px-12 border-l border-transparent">
         
@@ -62,6 +53,34 @@
                  and scrolls away as the user moves down. -->
             <div class="absolute bottom-10 left-0 animate-pulse text-xs uppercase tracking-widest opacity-50">
                 ( Scroll )
+            </div>
+        </section>
+
+
+        <!-- SECTION: WORKS -->
+        <section id="works" class="min-h-screen flex flex-col justify-center py-20">
+            <h2 class="text-sm uppercase tracking-[0.2em] mb-12 border-b border-black w-16 pb-2">Works</h2>
+            
+            <div class="flex flex-col space-y-16">
+                <!-- Placeholder Work 1 -->
+                <div class="group">
+                    <h3 class="text-3xl md:text-4xl italic mb-3">Untitled Manuscript</h3>
+                    <p class="text-lg text-gray-800 font-serif leading-relaxed">
+                        A novel exploring the intricacies of memory and loss. Currently in the final stages of revision.
+                        <br>
+                        <span class="text-sm text-gray-500 uppercase tracking-widest mt-2 block">( Forthcoming )</span>
+                    </p>
+                </div>
+
+                <!-- Placeholder Work 2 -->
+                <div class="group">
+                    <h3 class="text-3xl md:text-4xl italic mb-3">Selected Short Fiction</h3>
+                    <p class="text-lg text-gray-800 font-serif leading-relaxed">
+                        A collection of short stories published in various literary journals.
+                        <br>
+                        <span class="text-sm text-gray-500 uppercase tracking-widest mt-2 block">( Various Dates )</span>
+                    </p>
+                </div>
             </div>
         </section>
 
