@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J Haenni | Author</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom scrollbar to match the minimal aesthetic (optional, but nice) */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #ffffff; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #000000; 
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #333333; 
+        }
+
+        /* Selection color to mimic document highlighting */
+        ::selection {
+            background: #000000;
+            color: #ffffff;
+        }
+
+        /* Ensure the serif font feels like a classic document */
+        body {
+            font-family: 'Garamond', 'Times New Roman', Times, serif;
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+</head>
+<body class="bg-white text-black min-h-screen selection:bg-black selection:text-white">
+
+    <!-- Navigation: Top Right, No Bar, Just Text -->
+    <nav class="fixed top-0 right-0 p-8 z-50 mix-blend-difference">
+        <ul class="flex space-x-8 text-sm md:text-base tracking-widest uppercase">
+            <li><a href="#home" class="hover:underline decoration-1 underline-offset-4 transition-all">Home</a></li>
+            <li><a href="#about" class="hover:underline decoration-1 underline-offset-4 transition-all">About</a></li>
+            <li><a href="#contact" class="hover:underline decoration-1 underline-offset-4 transition-all">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Container: Left Justified, Narrow 'Document' Width -->
+    <main class="max-w-3xl mx-auto px-6 md:px-12 border-l border-transparent">
+        
+        <!-- SECTION: HERO / NAME -->
+        <!-- Added 'relative' so the absolute positioned scroll text stays within this screen-height container -->
+        <section id="home" class="relative min-h-screen flex flex-col justify-center items-start pt-20">
+            <h1 class="text-6xl md:text-8xl font-bold tracking-tighter mb-4">
+                J Haenni
+            </h1>
+            <p class="text-xl md:text-2xl italic font-light text-gray-800 mt-4 pl-1">
+                Author.
+            </p>
+            
+            <!-- Positioned absolutely at the bottom of the HERO section. 
+                 Since the section is the height of the screen, this starts at the bottom of the viewport 
+                 and scrolls away as the user moves down. -->
+            <div class="absolute bottom-10 left-0 animate-pulse text-xs uppercase tracking-widest opacity-50">
+                ( Scroll )
+            </div>
+        </section>
+
+
+        <!-- SECTION: ABOUT -->
+        <section id="about" class="min-h-screen flex flex-col justify-center py-20">
+            <h2 class="text-sm uppercase tracking-[0.2em] mb-12 border-b border-black w-16 pb-2">About</h2>
+            
+            <article class="prose prose-xl prose-p:text-black prose-headings:font-serif leading-loose font-serif">
+                <p class="mb-8 text-2xl md:text-3xl leading-relaxed">
+                    [Biography Placeholder]
+                </p>
+                <p class="mb-6 text-lg text-gray-800">
+                    J Haenni is a writer based in the quiet corners of the world. With a focus on minimalist prose and existential narratives, the work explores the silence between words as much as the words themselves.
+                </p>
+                <p class="mb-6 text-lg text-gray-800">
+                    Currently working on a debut novel that dissects the modern condition through the lens of historical memory.
+                </p>
+                <p class="text-lg text-gray-800">
+                    <em>(More biographical details to be added here...)</em>
+                </p>
+            </article>
+        </section>
+
+
+        <!-- SECTION: CONTACT -->
+        <section id="contact" class="min-h-[70vh] flex flex-col justify-start pt-32 pb-20">
+            <h2 class="text-sm uppercase tracking-[0.2em] mb-12 border-b border-black w-16 pb-2">Contact</h2>
+            
+            <div class="space-y-12 text-lg md:text-xl font-serif">
+                
+                <!-- Email -->
+                <div class="group cursor-pointer">
+                    <p class="text-xs text-gray-500 uppercase tracking-widest mb-1">Inquiries</p>
+                    <a href="mailto:hello@jhaenni.com" class="block text-2xl md:text-4xl hover:italic transition-all duration-300">
+                        hello@jhaenni.com
+                    </a>
+                </div>
+
+                <!-- Representation -->
+                <div class="group">
+                    <p class="text-xs text-gray-500 uppercase tracking-widest mb-1">Representation</p>
+                    <p class="text-xl md:text-2xl">
+                        Currently seeking representation.
+                    </p>
+                </div>
+
+                <!-- Socials (Text Links Only) -->
+                <div class="pt-12">
+                    <p class="text-xs text-gray-500 uppercase tracking-widest mb-4">Social</p>
+                    <div class="flex flex-col space-y-2 items-start">
+                        <a href="#" class="hover:underline underline-offset-4 decoration-1">Twitter / X</a>
+                        <a href="#" class="hover:underline underline-offset-4 decoration-1">Instagram</a>
+                        <a href="#" class="hover:underline underline-offset-4 decoration-1">Substack</a>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="mt-auto pt-20 text-xs text-gray-400 uppercase tracking-widest">
+                &copy; 2024 J Haenni. All rights reserved.
+            </footer>
+        </section>
+
+    </main>
+    
+    <script>
+        // Simple script to handle smooth navigation highlight
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
