@@ -33,7 +33,8 @@
         }
     </style>
 </head>
-<body class="bg-white text-black min-h-screen selection:bg-black selection:text-white">
+<!-- Added 'lowercase' to body to force all text to lowercase -->
+<body class="bg-white text-black min-h-screen selection:bg-black selection:text-white lowercase">
 
     <!-- Main Content Container: Left Justified, Narrow 'Document' Width -->
     <main class="max-w-3xl mx-auto px-6 md:px-12 border-l border-transparent">
@@ -51,7 +52,7 @@
             <!-- Positioned absolutely at the bottom of the HERO section. 
                  Since the section is the height of the screen, this starts at the bottom of the viewport 
                  and scrolls away as the user moves down. -->
-            <div class="absolute bottom-10 left-0 animate-pulse text-xs uppercase tracking-widest opacity-50">
+            <div class="absolute bottom-10 left-0 animate-pulse text-xs tracking-widest opacity-50">
                 ( Scroll )
             </div>
         </section>
@@ -59,7 +60,7 @@
 
         <!-- SECTION: WORKS -->
         <section id="works" class="min-h-screen flex flex-col justify-center py-20">
-            <h2 class="text-sm uppercase tracking-[0.2em] mb-12 border-b border-black w-16 pb-2">Works</h2>
+            <h2 class="text-sm tracking-[0.2em] mb-12 border-b border-black w-16 pb-2">Works</h2>
             
             <div class="flex flex-col space-y-16">
                 <!-- Placeholder Work 1 -->
@@ -68,7 +69,7 @@
                     <p class="text-lg text-gray-800 font-serif leading-relaxed">
                         A novel exploring the intricacies of memory and loss. Currently in the final stages of revision.
                         <br>
-                        <span class="text-sm text-gray-500 uppercase tracking-widest mt-2 block">( Forthcoming )</span>
+                        <span class="text-sm text-gray-500 tracking-widest mt-2 block">( Forthcoming )</span>
                     </p>
                 </div>
 
@@ -78,7 +79,7 @@
                     <p class="text-lg text-gray-800 font-serif leading-relaxed">
                         A collection of short stories published in various literary journals.
                         <br>
-                        <span class="text-sm text-gray-500 uppercase tracking-widest mt-2 block">( Various Dates )</span>
+                        <span class="text-sm text-gray-500 tracking-widest mt-2 block">( Various Dates )</span>
                     </p>
                 </div>
             </div>
@@ -87,9 +88,9 @@
 
         <!-- SECTION: ABOUT -->
         <section id="about" class="min-h-screen flex flex-col justify-center py-20">
-            <h2 class="text-sm uppercase tracking-[0.2em] mb-12 border-b border-black w-16 pb-2">About</h2>
+            <h2 class="text-sm tracking-[0.2em] mb-12 border-b border-black w-16 pb-2">About</h2>
             
-            <article class="prose prose-xl prose-p:text-black prose-headings:font-serif leading-loose font-serif">
+            <article class="prose prose-xl prose-p:text-black prose-headings:font-serif leading-loose font-serif lowercase">
                 <p class="mb-8 text-2xl md:text-3xl leading-relaxed">
                     [Biography Placeholder]
                 </p>
@@ -108,13 +109,13 @@
 
         <!-- SECTION: CONTACT -->
         <section id="contact" class="min-h-[70vh] flex flex-col justify-start pt-32 pb-20">
-            <h2 class="text-sm uppercase tracking-[0.2em] mb-12 border-b border-black w-16 pb-2">Contact</h2>
+            <h2 class="text-sm tracking-[0.2em] mb-12 border-b border-black w-16 pb-2">Contact</h2>
             
             <div class="space-y-12 text-lg md:text-xl font-serif">
                 
                 <!-- Email -->
                 <div class="group cursor-pointer">
-                    <p class="text-xs text-gray-500 uppercase tracking-widest mb-1">Inquiries</p>
+                    <p class="text-xs text-gray-500 tracking-widest mb-1">Inquiries</p>
                     <a href="mailto:hello@jhaenni.com" class="block text-2xl md:text-4xl hover:italic transition-all duration-300">
                         hello@jhaenni.com
                     </a>
@@ -122,7 +123,7 @@
 
                 <!-- Representation -->
                 <div class="group">
-                    <p class="text-xs text-gray-500 uppercase tracking-widest mb-1">Representation</p>
+                    <p class="text-xs text-gray-500 tracking-widest mb-1">Representation</p>
                     <p class="text-xl md:text-2xl">
                         Currently seeking representation.
                     </p>
@@ -130,7 +131,7 @@
 
                 <!-- Socials (Text Links Only) -->
                 <div class="pt-12">
-                    <p class="text-xs text-gray-500 uppercase tracking-widest mb-4">Social</p>
+                    <p class="text-xs text-gray-500 tracking-widest mb-4">Social</p>
                     <div class="flex flex-col space-y-2 items-start">
                         <a href="#" class="hover:underline underline-offset-4 decoration-1">Twitter / X</a>
                         <a href="#" class="hover:underline underline-offset-4 decoration-1">Instagram</a>
@@ -139,7 +140,7 @@
                 </div>
             </div>
 
-            <footer class="mt-auto pt-20 text-xs text-gray-400 uppercase tracking-widest">
+            <footer class="mt-auto pt-20 text-xs text-gray-400 tracking-widest">
                 &copy; 2024 J Haenni. All rights reserved.
             </footer>
         </section>
